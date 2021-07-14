@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /* initail style  */
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: 0;
@@ -39,9 +42,7 @@ img{
 }
 img:hover{
     transform: scale(1.01);
-
 }
-
 .btn {
   padding: 10px 24px;
   border: none;
@@ -68,7 +69,6 @@ header {
   width: 1100px;
   margin: 0 auto;
 }
-
 /* header navbar style  */
 .navbar {
   display: flex;
@@ -91,13 +91,10 @@ header {
     border-bottom: 4px solid #e02c6d;
     transition:  width 0.5s ease-in-out;
 }
-
 .nav__items li:hover::after{
 width: 45px;
 }
-
 /* header home banner section  */
-
 #home__banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -112,12 +109,11 @@ width: 45px;
   height: 100%;
 }
 
-/* player cards styles */
+/* main and player cards styles */
 
 main {
   padding: 50px 0;
 }
-
 #player__cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -125,7 +121,6 @@ main {
   row-gap: 30px;
   padding: 50px 0;
 }
-
 .card {
   width: 330px;
   height: 474px;
@@ -133,12 +128,10 @@ main {
   box-sizing: border-box;
   box-shadow: 0px 0px 40px #03030341;
 }
-
 .card__img img {
   height: 256px;
   width: 300px;
 }
-
 .card__text h3 {
   font-weight: bold;
   font-size: 28px;
@@ -149,7 +142,6 @@ main {
   font-size: 1rem;
   margin: 10px 0px;
 }
-
 /* match section  */
 #match {
   display: grid;
@@ -171,6 +163,41 @@ main {
 }
 .match__img img {
   width: 100%;
+}
+
+/* upcoming match styles */
+#upcoming__match .section__header{
+  width: 340px;
+}
+#upcoming__match:hover .section__header::after{
+  width: 340px;
+}
+.upcoming__match__wapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.match__one{
+  width: 400px;
+}
+.upcoming__img img{
+  width: 400px;
+  overflow: hidden;
+  display: block;
+}
+.upcoming__text h2{
+  margin:10px 0;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+.upcoming__text h4{
+margin: 10px 0;
+color: #6c6c6c;
+letter-spacing: 3px;
+word-spacing: 5px;
 }
 
 /* contact styles */
@@ -217,6 +244,9 @@ main {
 .input:focus{
   outline: none;
 }
+.contact__form button{
+  width:34%;
+}
 
 /* footer styles */
 footer {
@@ -227,11 +257,9 @@ footer {
   border-top: 1px solid #c7c7c7;
   padding: 30px 0;
 }
-
 footer img {
   width: 480px;
 }
-
 .footer__icons i {
   color: #969bab;
   margin: 0 14px;
@@ -247,10 +275,7 @@ footer p {
   margin: 20px 0;
 }
 
-
-
 /* media query styles */
-
 
 /* media for mobile devices */
 @media only screen and (max-width:480px) {
@@ -258,12 +283,12 @@ footer p {
     #home__banner,
     #match,
     #player__cards,
-    .contact__items{
+    .contact__items,
+    .upcoming__match__wapper{
         grid-template-columns:1fr;
         row-gap: 30px;
         justify-content: center;
         align-items: center;
-        /* margin: 0;  */
     }
     .nav__items{
         display: none;
@@ -274,7 +299,6 @@ footer p {
     .btn{
         padding: 8px 20px;
     }
-
     .home__banner--text h1{
         font-size: 35px;
     }
@@ -304,7 +328,7 @@ footer p {
       width:300px;
     }
     .contact__form{
-     margin: 0 15px;
+      margin: 0 15px;
     }
     .contact__img{
       display: none;
@@ -312,20 +336,28 @@ footer p {
     footer img{
         width: 200px;
     }
-
+    .upcoming__img img{
+      width:300px;
+    }
+    #upcoming__match{
+      padding: 30px 0;
+    }
+    .match__one{
+      width: 320px;
+      margin:20px;
+    }
 }
 
 /* media query for tablet devices */
 @media  only screen and (max-width:768px) and (min-width:481px) {
-
     #home__banner,
-    #match
-    {
+    #match,
+    .contact__items,
+    .upcoming__match__wapper {
         grid-template-columns:1fr;
         row-gap: 30px;
         justify-content: center;
-        align-items: center;
-        /* margin: 0;  */
+        align-items: center;  
     }
     .nav__items{
         display: none;
@@ -350,10 +382,28 @@ footer p {
     #player__cards {
         padding: 20px;
     }
+    .contact__img{
+      display: none;
+    }
+    .input{
+      width: 66%;
+
+    }
     #match{
         padding: 10px 0 ;
     }
-    
+    .match__one{
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .upcoming__img img{
+      width:400px;
+    }
+    .contact__form{
+      width: 500px;
+      margin: 0 auto;
+    }
 }
     
     
