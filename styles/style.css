@@ -182,6 +182,7 @@ main {
 }
 .match__one{
   width: 400px;
+  margin: 0 auto;
 }
 .upcoming__img img{
   width: 400px;
